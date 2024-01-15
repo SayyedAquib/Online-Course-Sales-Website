@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | Online Course Store</title>
+  <!-- Link to Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to custom CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation bar using Bootstrap's navbar component -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Online Course Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="cart.html">Cart <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb to indicate the current page -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="courses.html">Courses</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Cart</li>
+    </ol>
+  </nav>
+
+  <!-- Container to display the courses in the cart using Bootstrap's table component -->
+  <div class="container">
+    <h3 class="text-center">Your Cart</h3>
+    <!-- Table to display the selected courses with details such as title, price, and quantity -->
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Course</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Subtotal</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example row for HTML course -->
+        <tr id=“course-1”>
+          <td>HTML for Beginners</td>
+          <td>$19.99</td>
+          <td>1</td>
+          <td>$19.99</td>
+          <td onclick="removeCourse('course-1')"><a href="#" class="btn btn-danger">Remove</a></td>
+        </tr>
+        <!-- Example row for CSS course -->
+        <tr id=“course-2”>
+          <td>CSS for Beginners</td>
+          <td>$19.99</td>
+          <td>2</td>
+          <td>$39.98</td>
+          <td onclick="removeCourse('course-2')"><a href="#" class="btn btn-danger">Remove</a></td>
+        </tr>
+        <!-- Example row for Bootstrap course -->
+        <tr id=“course-3”>
+          <td>Bootstrap for Beginners</td>
+          <td>$29.99</td>
+          <td>1</td>
+          <td>$29.99</td>
+          <td onclick="removeCourse('course-3')"><a href="#" class="btn btn-danger">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Summary of the total cost and a checkout button -->
+    <div class="row">
+      <div class="col-md-8">
+        <p class="lead">Total Cost: <strong class="text-primary">$89.96</strong></p>
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="#" class="btn btn-success btn-lg">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with some links and social media icons -->
+  <footer class="bg-dark text-white p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#" class="text-white">About Us</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-right">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to jQuery, Popper.js, and Bootstrap CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Link to Font Awesome CDN for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+
+</html>
